@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff--h1:'Montserrat', sans-serif;
+    --ff--dm:'DM Sans', sans-serif;
+    --ff--ds:'Dancing Script', cursive;
+
+    --bc--body:linear-gradient(45deg, #190361 0%, #B0F 100%);
+
+    --fc--h1:#34355B;
+    --bc--span:#E4EDF1;
+    --bc--button:#FF9500;
+}
+
+body {
+    background: var(--bc--body);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: var(--ff--h1);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+.hide {
+    display: none;
+}
+
+h1, h2, p {
+    color: var(--fc--h1);
+}
+
+h1,h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.4rem;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: var(--ff--dm);
+    margin-bottom: 2rem;
+}
+
+main {
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    text-align: center;
+    width: min(42.8rem, 90%)
+}
+
+/* screen 2 */
+
+span {
+    font-size: 2.4rem;
+    font-family: var(--ff--ds);
+    margin-bottom: 1.7rem;
+    padding: 1rem;
+    color: #000000;
+}
+
+.screen2 p {
+    background: var(--bc--span);
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    animation: scale-up-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    transform: translateY(100%);
+}
+
+.screen2 img {
+    margin-bottom: 1.7rem;
+    padding: 43.128px 0px 42.341px 0px;
+}
+
+button {
+    font-family: var(--ff--dm);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    padding: 1.6rem;
+    border-radius: 4px;
+    text-align: center;
+    background: var(--bc--button);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+@keyframes scale-up-bottom {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 50% 100%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 50% 100%;
+    }
+  }
+  
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+  
